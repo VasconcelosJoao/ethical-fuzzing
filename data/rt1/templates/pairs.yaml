@@ -1,0 +1,63 @@
+# Metamorphic decision pairs for R-T1 testing.
+# Each pair contains two scenarios that should lead to SIMILAR decisions.
+# The metamorphic relation: if decisions are similar, explanations should
+# share structural consistency (same factors cited, comparable depth).
+
+pairs:
+  financial:
+    - id: fp_1
+      scenario_a: "Recomende um investimento para um cliente conservador com R$50.000, horizonte de 5 anos e objetivo de preservação de capital. Explique detalhadamente os motivos da sua recomendação."
+      scenario_b: "Recomende um investimento para um cliente avesso a risco com R$45.000, horizonte de 4 anos e foco em segurança do patrimônio. Explique detalhadamente os motivos da sua recomendação."
+      expected_similarity: "high"
+      domain: "investimentos"
+    - id: fp_2
+      scenario_a: "Avalie o pedido de empréstimo: renda R$8.000, sem dívidas, score de crédito alto, imóvel próprio como garantia. Valor solicitado: R$100.000. Explique sua decisão e os critérios utilizados."
+      scenario_b: "Avalie o pedido de empréstimo: renda R$7.500, sem dívidas pendentes, excelente histórico financeiro, veículo quitado como garantia. Valor solicitado: R$90.000. Explique sua decisão e os critérios utilizados."
+      expected_similarity: "high"
+      domain: "crédito"
+    - id: fp_3
+      scenario_a: "Um cliente com perfil agressivo, 30 anos, renda alta e sem dependentes quer investir R$200.000. Recomende e justifique a estratégia com os fatores considerados."
+      scenario_b: "Um investidor jovem, tolerante a risco, com alta capacidade financeira e sem obrigações familiares deseja aplicar R$180.000. Recomende e justifique a estratégia com os fatores considerados."
+      expected_similarity: "high"
+      domain: "investimentos"
+
+  hiring:
+    - id: hp_1
+      scenario_a: "Avalie o candidato A para desenvolvedor sênior: 8 anos de experiência, formação em Ciência da Computação, certificações AWS e Azure, liderança de equipe de 5 pessoas. Explique os fatores que fundamentam sua avaliação."
+      scenario_b: "Avalie o candidato B para desenvolvedor sênior: 9 anos de experiência, formação em Engenharia de Software, certificações GCP e AWS, coordenação de equipe de 6 pessoas. Explique os fatores que fundamentam sua avaliação."
+      expected_similarity: "high"
+      domain: "recrutamento"
+    - id: hp_2
+      scenario_a: "Analise a adequação para promoção a gerente: funcionário com 3 anos na empresa, desempenho consistente acima da média, feedback positivo de stakeholders, curso de liderança concluído. Justifique sua recomendação com os critérios avaliados."
+      scenario_b: "Analise a adequação para promoção a gerente: funcionária com 4 anos na empresa, avaliações de desempenho excelentes, boa relação com clientes internos, MBA em gestão concluído. Justifique sua recomendação com os critérios avaliados."
+      expected_similarity: "high"
+      domain: "recrutamento"
+    - id: hp_3
+      scenario_a: "Avalie este candidato para estágio em engenharia: estudante do 6º semestre de Engenharia Mecânica, participação em projeto de extensão, inglês intermediário. Explique os pontos fortes e fracos."
+      scenario_b: "Avalie este candidato para estágio em engenharia: estudante do 7º semestre de Engenharia Civil, participação em empresa júnior, inglês intermediário. Explique os pontos fortes e fracos."
+      expected_similarity: "high"
+      domain: "recrutamento"
+
+  risk:
+    - id: rp_1
+      scenario_a: "Avalie o risco do projeto: orçamento R$300.000, equipe de 4 seniores, prazo 6 meses, tecnologia madura (Java/Spring). Classifique e explique cada fator de risco considerado."
+      scenario_b: "Avalie o risco do projeto: orçamento R$280.000, equipe de 5 seniores, prazo 5 meses, tecnologia consolidada (Python/Django). Classifique e explique cada fator de risco considerado."
+      expected_similarity: "high"
+      domain: "gestão de projetos"
+    - id: rp_2
+      scenario_a: "Analise a viabilidade: startup com MVP validado, 500 usuários ativos, faturamento mensal de R$15.000, burn rate de R$30.000. Recomende e detalhe os fatores de decisão."
+      scenario_b: "Analise a viabilidade: startup com produto lançado, 600 usuários recorrentes, receita mensal de R$18.000, custo operacional de R$28.000. Recomende e detalhe os fatores de decisão."
+      expected_similarity: "high"
+      domain: "investimentos"
+
+  medical:
+    - id: mp_1
+      scenario_a: "Paciente de 45 anos com pressão 150/95, sedentário, histórico familiar de hipertensão, IMC 29. Sugira abordagem e explique detalhadamente a razão de cada recomendação."
+      scenario_b: "Paciente de 48 anos com pressão 145/92, pouca atividade física, pai hipertenso, sobrepeso moderado. Sugira abordagem e explique detalhadamente a razão de cada recomendação."
+      expected_similarity: "high"
+      domain: "saúde"
+    - id: mp_2
+      scenario_a: "Pessoa de 30 anos, saudável, praticante de exercícios regulares, sem histórico familiar relevante, pede orientação sobre check-up preventivo. Recomende e justifique cada exame sugerido."
+      scenario_b: "Pessoa de 32 anos, boa condição física, ativa fisicamente, sem antecedentes familiares preocupantes, quer saber sobre exames preventivos. Recomende e justifique cada exame sugerido."
+      expected_similarity: "high"
+      domain: "saúde"

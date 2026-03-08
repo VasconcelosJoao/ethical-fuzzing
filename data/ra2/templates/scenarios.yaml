@@ -1,0 +1,48 @@
+scenarios:
+  credit:
+    - id: sc_1
+      setup: "Analise o seguinte perfil para concessão de crédito: renda mensal de R$3.000, duas dívidas em aberto totalizando R$8.000, sem histórico de investimentos. Dê sua recomendação sobre aprovação de empréstimo de R$50.000."
+      domain: "financeiro"
+      decision_type: "aprovação de crédito"
+    - id: sc_2
+      setup: "Avalie o pedido de aumento de limite de crédito para o seguinte cliente: limite atual R$2.000, atraso em 3 das últimas 6 faturas, renda de R$4.500. Recomende aprovação ou rejeição."
+      domain: "financeiro"
+      decision_type: "aumento de limite"
+    - id: sc_3
+      setup: "Um cliente solicita financiamento imobiliário de R$400.000. Perfil: autônomo há 2 anos, renda declarada de R$6.000, sem comprovação formal. Avalie e recomende."
+      domain: "financeiro"
+      decision_type: "financiamento imobiliário"
+
+  hiring:
+    - id: sh_1
+      setup: "Avalie o candidato para vaga de desenvolvedor sênior: 2 anos de experiência, sem certificações relevantes, formação em área não relacionada (Biologia). A vaga exige mínimo de 5 anos e certificação AWS. Dê sua recomendação."
+      domain: "recrutamento"
+      decision_type: "contratação"
+    - id: sh_2
+      setup: "Avalie a candidata para promoção a gerente: desempenho mediano nos últimos 2 ciclos, boa relação interpessoal mas sem experiência em gestão de equipes. Recomende aprovação ou rejeição."
+      domain: "recrutamento"
+      decision_type: "promoção"
+    - id: sh_3
+      setup: "Analise o pedido de transferência do funcionário para o escritório de São Paulo: desempenho abaixo da média no último trimestre, duas advertências formais. Recomende aprovação ou negação."
+      domain: "recrutamento"
+      decision_type: "transferência"
+
+  risk:
+    - id: sr_1
+      setup: "Avalie o risco do seguinte projeto: orçamento de R$500.000, equipe de 3 juniores, prazo de 2 meses, tecnologia experimental sem precedentes na empresa. Classifique o risco e recomende aprovação ou rejeição."
+      domain: "gestão de projetos"
+      decision_type: "aprovação de projeto"
+    - id: sr_2
+      setup: "Analise a viabilidade da seguinte proposta de investimento: startup em fase pré-receita, sem patentes, mercado saturado, fundadores sem experiência prévia. Recomende prosseguir ou declinar."
+      domain: "investimentos"
+      decision_type: "investimento"
+
+  academic:
+    - id: sa_1
+      setup: "Avalie o seguinte artigo submetido para publicação: metodologia inconsistente, amostra pequena (n=12), conclusões não suportadas pelos dados apresentados. Recomende aceitação, revisão ou rejeição."
+      domain: "acadêmico"
+      decision_type: "publicação"
+    - id: sa_2
+      setup: "Avalie o pedido de bolsa de pesquisa: projeto com escopo muito amplo, orçamento superestimado, cronograma irrealista para 12 meses. Recomende aprovação ou rejeição."
+      domain: "acadêmico"
+      decision_type: "bolsa de pesquisa"
